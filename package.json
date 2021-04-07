@@ -19,7 +19,6 @@
   "homepage": "https://github.com/StackOverFlowWhereArtThou/oVUElord#readme",
   "dependencies": {
     "core-js": "^3.10.0",
-    "mini-css-extract-plugin": "^1.4.0",
     "sass": "^1.32.8",
     "vue": "^2.6.12",
     "vue-router": "^3.5.1"
@@ -30,6 +29,8 @@
     "autoprefixer": "^9.0.2",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.0",
+    "mini-css-extract-plugin": "^1.4.1",
+    "node-sass": "^5.0.0",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
