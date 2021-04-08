@@ -97,10 +97,10 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     // new MiniCssExtractPlugin(),
-    // new MiniCssExtractPlugin({
-    //   filename: isDevelopment ? '[name].css' : '[name].[hash].css',
-    //   chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css',
-    // }),
+    new MiniCssExtractPlugin({
+      filename: isDevelopment ? '[name].css' : '[name].[hash].css',
+      chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css',
+    }),
   ],
   // resolve: {
   //   //   alias: {
