@@ -4,8 +4,8 @@
       <router-link to="/">Hello From App</router-link><router-link to="/about"></router-link>
     </div>
     <router-view />
-    <navbar @renderMetrics="isTreeView = false" @renderTreeTest="isTreeView = true"/>
-    <main-container :isTreeView="isTreeView"/>
+    <navbar @renderMetrics="isMapView = false" @renderMap="isMapView = true"/>
+    <main-container :isMapView="isMapView"/>
   </div>
 </template>
 
@@ -23,7 +23,7 @@ export default {
   },
    data() {
     return {
-      isTreeView: false
+      isMapView: false
     }
   }
 };

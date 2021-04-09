@@ -1,20 +1,20 @@
 <template>
   <div>
     <p>I am main container component</p>
-    <tree v-if="isTreeView"/>
+    <Map v-if="isMapView" />
     <web-metrics v-else/>
   </div>
 </template>
 
 <script>
-import Tree from '../components/Tree.vue'
+import Map from '../components/Map.vue'
 import WebMetrics from '../components/WebMetrics.vue'
 
 export default {
-  components: { Tree, WebMetrics },
+  components: { Map, WebMetrics },
   name: 'MainContainer',
   props: {
-    isTreeView: Boolean
+    isMapView: Boolean
   }
 }
 </script>
