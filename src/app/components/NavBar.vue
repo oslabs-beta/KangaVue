@@ -1,8 +1,8 @@
 <template>
   <div>
-    <!-- <button v-on:click="{{log}}">Tree</button> -->
-    <button @click='log'>Tree</button>
-    <button>Web Metrics</button>
+    <p>I am the NavBar component</p>
+    <button @click='renderTree()'>Tree</button>
+    <button @click='renderMetrics()'>Web Metrics</button>
   </div>
 </template>
 
@@ -12,6 +12,12 @@ export default {
   methods: {
     log() {
       console.log('tree has been clicked')
+    },
+    renderTree() {
+      this.$emit('renderTreeTest')
+    },
+    renderMetrics() {
+      this.$emit('renderMetrics')
     }
   }
 }
