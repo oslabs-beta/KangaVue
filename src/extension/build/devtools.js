@@ -1,11 +1,16 @@
-chrome.devtools.panels.create('oVUElord', null, 'panel.html', () => {console.log('panel create')});
+chrome.devtools.panels.create('oVUElord', null, 'panel.html', () => {});
 let backgroundPageConnection = chrome.runtime.connect({
     name: "devtools-page"
 });
 
 backgroundPageConnection.onMessage.addListener(function (message) {
-    // Handle responses from the background page, if any
-});
+chrome.runtime.onMessage.addListener((message, callback) => {
+  if (message == "runContentScript"){
+    chrome.scripting.executeScript({
+      file: 'contentScript.js'
+    });
+  }
+});});
 
 // Relay the tab ID to the background page
 chrome.runtime.sendMessage({

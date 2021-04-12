@@ -21,7 +21,8 @@
           "http://localhost/*",
           "https://localhost/*"
         ],
-        "js": ["content.bundle.js"]
+        "js": ["content.bundle.js"],
+        "run_at" : "document_start"
       }
     ]
 }
