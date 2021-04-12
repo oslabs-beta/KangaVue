@@ -9,12 +9,12 @@ const isDevelopment = process.env.NODE_ENV !== 'production';
 module.exports = {
   entry: {
     app: './src/app/index.js',
-    // background: './src/extension/background.js',
-    // content: './src/extension/contentScript.ts',
+    background: './src/extension/build/background.js',
+    content: './src/extension/build/content_script.js',
     // backend: './src/backend/index.ts',
   },
   output: {
-    path: path.resolve(__dirname, 'src/extension/build/bundles'),
+    path: path.resolve(__dirname, 'src/extension/build'),
     filename: '[name].bundle.js',
   },
   module: {
