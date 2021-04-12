@@ -1,1 +1,1 @@
-window.addEventListener("mousedown",(o=>{console.log(window.__VUE_DEVTOOLS_INSTANCE_MAP__)}));
+window.addEventListener("mousedown",(o=>{console.log(window)}));
