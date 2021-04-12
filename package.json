@@ -19,17 +19,20 @@
   "homepage": "https://github.com/StackOverFlowWhereArtThou/oVUElord#readme",
   "dependencies": {
     "core-js": "^3.10.0",
+    "d3": "^6.6.2",
     "sass": "^1.32.8",
     "vue": "^2.6.12",
     "vue-router": "^3.5.1",
-    "vued3tree": "^5.1.0"
+    "vued3tree": "^5.1.0",
+    "vuetify": "^2.4.9",
+    "web-vitals": "^1.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.13.14",
     "@babel/preset-env": "^7.13.12",
     "autoprefixer": "^9.0.2",
     "babel-loader": "^8.2.2",
-    "css-loader": "^5.2.0",
+    "css-loader": "^5.2.1",
     "mini-css-extract-plugin": "^1.4.1",
     "node-sass": "^5.0.0",
     "postcss-loader": "^3.0.0",

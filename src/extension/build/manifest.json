@@ -2,6 +2,13 @@
     "name": "oVUElord",
     "description": "Developer Tool for Vue",
     "version": "1.0",
+    "permissions": [
+    "contextMenus",
+    "tabs",
+    "activeTab",
+    "http://localhost/*",
+    "https://localhost/*"
+  ],
     "manifest_version": 3,
     "minimum_chrome_version": "10.0",
     "devtools_page": "devtools.html"
