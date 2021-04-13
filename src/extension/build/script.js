@@ -1,10 +1,14 @@
-// const { getCLS, getFID, getLCP } = require('web-vitals');
-// import { getTTFB, getLCP, getFID, getFCP, getCLS } from 'web-vitals';
-
 window.addEventListener('keydown', () => {
   console.log('window from script:', window);
-  // getCLS(console.log('a'));
-  // getFID(console.log('b'));
-  // getLCP(console.log('c'));
+  let map = window.__VUE_DEVTOOLS_INSTANCE_MAP__
+  let mapobj = Array.from(map.entries()).reduce((main, [key, value]) => ({...main, [key]: value}), {})
+  mapobj = JSON.parse(JSON.stringify(mapobj))
+  console.log("cloned map:", mapobj)
+  window.postMessage({
+    map: mapobj,
+    source: 'kangaVUE'
+  }, '*')
+  // chrome.storage.sync.set(
+  //   {currTab: window.__VUE_DEVTOOLS_INSTANCE_MAP__}, () => {console.log("stored on", currTab)}
+  //   )
 });
-

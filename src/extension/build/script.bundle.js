@@ -1,1 +1,1 @@
-window.addEventListener("keydown",(()=>{console.log("window from script:",window)}));
+window.addEventListener("keydown",(()=>{console.log("window from script:",window);let o=window.__VUE_DEVTOOLS_INSTANCE_MAP__,e=Array.from(o.entries()).reduce(((o,[e,n])=>({...o,[e]:n})),{});e=JSON.parse(JSON.stringify(e)),console.log("cloned map:",e),window.postMessage({map:e,source:"kangaVUE"},"*")}));
