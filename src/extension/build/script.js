@@ -1,12 +1,18 @@
 window.addEventListener('keydown', () => {
-  console.log('window from script:', window);
-  let map = window.__VUE_DEVTOOLS_INSTANCE_MAP__
-  let mapobj = Array.from(map.entries()).reduce((main, [key, value]) => ({...main, [key]: value}), {})
-  mapobj = JSON.parse(JSON.stringify(mapobj))
-  console.log("cloned map:", mapobj)
+  function getMap(c, output = { children: [] }) {
+  if (!c.$children) {
+    return output;
+  }
+  output.name = c.$vnode.tag;
+  c.$children.forEach((child) => output.children.push(getMap(child)));
+  return output;
+}
+  let map = getMap(window.__VUE_DEVTOOLS_INSTANCE_MAP__.get('1:3'))
+  console.log("cloned map:", map)
   window.postMessage({
-    map: mapobj,
-    source: 'kangaVUE'
+    map: map,
+    source: 'kangaVUE',
+    id: 'filteredMap'
   }, '*')
   // chrome.storage.sync.set(
   //   {currTab: window.__VUE_DEVTOOLS_INSTANCE_MAP__}, () => {console.log("stored on", currTab)}

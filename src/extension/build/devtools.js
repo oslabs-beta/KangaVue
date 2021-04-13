@@ -4,6 +4,10 @@ var backgroundPageConnection = chrome.runtime.connect({
     name: "panel"
 });
 
+let frontEndConnection = chrome.runtime.connect({
+    name: "frontEnd"
+});
+
 backgroundPageConnection.postMessage({
     name: 'init',
     tabId: chrome.devtools.inspectedWindow.tabId
@@ -20,6 +24,12 @@ chrome.runtime.onMessage.addListener((message, callback) => {
     chrome.scripting.executeScript({
       file: 'content_script.js'
     });
+  }else
+  if(message.id === 'filteredMap'){
+    console.log("backpagecon:", backgroundPageConnection)
+    console.log('frontendcon:', frontEndConnection)
+    console.log("msg:", message)
+    message.tabId.postMessage(message)
   }
 });});
 

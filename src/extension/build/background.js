@@ -50,12 +50,13 @@ chrome.runtime.onConnect.addListener(function (port) {
 // current tab
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     // Messages from content scripts should have sender.tab set
-    console.log('sender:', sender)
-    console.log('request:', request)
     if (sender.tab) {
       var tabId = sender.tab.id;
       if (tabId in connections) {
-        connections[tabId].postMessage(request);
+        console.log('this message is sending to:', connections[tabId])
+        let msg = {...request, connections, tabId}
+        console.log('msg from backgroundjs ln60:', msg)
+        connections[tabId].postMessage(msg);
       } else {
         console.log("Tab not found in connection list.");
       }
