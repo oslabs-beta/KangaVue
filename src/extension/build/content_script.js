@@ -28,3 +28,20 @@ getLCP(gatherMetrics);
 getFID(gatherMetrics);
 getFCP(gatherMetrics);
 getCLS(gatherMetrics);
+
+window.addEventListener('message', function(event) {
+  // Only accept messages from the same frame
+  if (event.source !== window) {
+    return;
+  }
+
+  var message = event.data;
+
+  // Only accept messages that we know are ours
+  if (typeof message !== 'object' || message === null ||
+      !message.source === 'KangaVUE') {
+    return;
+  }
+  console.log("content script sending message, ln45:", message)
+  chrome.runtime.sendMessage(message);
+});
