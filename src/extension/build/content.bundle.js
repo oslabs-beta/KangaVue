@@ -1,1 +1,1 @@
-window.addEventListener("mousedown",(o=>{console.log(window)}));
+!function(){let e=document.createElement("script");e.src=chrome.runtime.getURL("script.js"),e.type="module",e.onload=function(){this.remove()},(document.head||document.documentElement).appendChild(e)}();
