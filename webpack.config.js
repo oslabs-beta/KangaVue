@@ -11,6 +11,7 @@ module.exports = {
     app: './src/app/index.js',
     background: './src/extension/build/background.js',
     content: './src/extension/build/content_script.js',
+    script: './src/extension/build/script.js',
     // backend: './src/backend/index.ts',
   },
   output: {

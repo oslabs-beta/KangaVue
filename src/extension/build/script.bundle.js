@@ -1,0 +1,1 @@
+window.addEventListener("keydown",(()=>{console.log("window from script:",window)}));
