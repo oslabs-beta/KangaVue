@@ -1,0 +1,20 @@
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  padding: 0px;
+  /* border-style: solid;
+  border-color: red; */
+}
+
+#app {
+  height: 100%;
+  border-style: solid;
+  border-color: blue;
+
+}

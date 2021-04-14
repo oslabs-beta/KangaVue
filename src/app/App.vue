@@ -1,9 +1,9 @@
 <template>
-  <div id="app">
-    <div class="nav">
+  <div id='mainDiv'>
+    <!-- <div class="nav">
       <router-link to="/"></router-link><router-link to="/about"></router-link>
     </div>
-    <router-view />
+    <router-view /> -->
     <navbar @renderMetrics="isMapView = false" @renderMap="isMapView = true" @setTree="setTree"/>
     <main-container :isMapView="isMapView"/>
   </div>
@@ -36,7 +36,9 @@ export default {
 };
 </script>
 <style>
-  #app{
-    margin: 0%;
+  #mainDiv {
+    height: 100%;
+    border-style: solid;
+    border-color: blue;
   }
 </style>

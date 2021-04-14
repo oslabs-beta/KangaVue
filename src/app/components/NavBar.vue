@@ -1,6 +1,5 @@
 <template>
   <div id='navBarDiv'>
-    <p>I am the NavBar test p tag</p>
     <button @click='renderMap()'>Tree</button>
     <button @click='renderMetrics()'>Web Metrics</button>
     <button @click='setTree()'>Set Tree</button>
@@ -37,10 +36,25 @@ export default {
 </script>
   
 <style>
-#navBarDiv {
-    background-color: black;
+  #navBarDiv {
+    background-color: #262323;
+    border-style: solid;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* border-color: red; */
   }
-  p {
-    font-size: 22px;
+  button {
+    height: 100%;
+    width: 60px;
+    background-color: #262323;
+    color: white;
+    overflow: hidden;
+    outline: none;
+    border: none;
+  }
+  button:hover {
+    background-color: #0EA47A;
   }
 </style>
