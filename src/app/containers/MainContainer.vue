@@ -2,7 +2,11 @@
   <div>
     <p>I am main container component</p>
       <Map v-if="isMapView" :treex="treex" />
-    <web-metrics v-else/>
+    <div v-else class="webMetricContainer">
+      <web-metrics name="LCP"/>
+      <web-metrics name="SFX"/>
+    </div>
+    
   </div>
 </template>
 

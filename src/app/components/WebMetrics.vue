@@ -1,14 +1,21 @@
 <template>
 <div id="chart">
+    Name that should be passed down {{name}}
         <apexchart type="radialBar" height="350" :options="chartOptions" :series="series"></apexchart>
       </div>
 </template>
 <script>
+// let lcpMetric = localStorage.LCP;
+// console.log('lcpMetric', lcpMetric)
 export default {
   name: 'WebMetrics',
-  data: () => ({
-          
-          series: [125],
+  props: {
+    name: String
+  },
+  data (){
+    console.log('name of web metric', this.name);
+    return {
+          series: [localStorage.LCP], // needs to get the value
           chartOptions: {
             chart: {
               height: 350,
@@ -86,11 +93,12 @@ export default {
             stroke: {
               lineCap: 'round'
             },
-            labels: ['Percent'],
-          },
+            labels: [this.name], // Needs to be the metric - used to be Percent
+          }
           
           
-        })
+        }
+      }
 }
 </script>
 

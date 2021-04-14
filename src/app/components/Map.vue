@@ -27,12 +27,14 @@ export default {
     treex: Object
   },
   data (){
-    console.log('treex:', this.treex)
-    let newmap = JSON.parse(this.treex)
-    console.log("newmap:", newmap)
-    return {
-      tree: newmap
-    }
+    //if(this.treex){
+      console.log('treex:', this.treex);
+      let newmap = JSON.parse(this.treex);
+      console.log("newmap:", newmap);
+      return {
+        tree: newmap
+      }
+   // }
   },
   mounted: function(){
     console.log("mounted tree:", this.treex)

@@ -19,6 +19,7 @@ const gatherMetrics = ({ name, value }) => {
     type: 'performance:metric',
     name,
     value,
+    id: 'webMetric',
   });
 };
 
