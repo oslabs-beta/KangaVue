@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="nav">
-      <router-link to="/">Hello From App</router-link><router-link to="/about"></router-link>
+      <router-link to="/"></router-link><router-link to="/about"></router-link>
     </div>
     <router-view />
     <navbar @renderMetrics="isMapView = false" @renderMap="isMapView = true"/>
@@ -28,3 +28,8 @@ export default {
   }
 };
 </script>
+<style>
+  #app{
+    margin: 0%;
+  }
+</style>

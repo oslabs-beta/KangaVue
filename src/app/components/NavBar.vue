@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <p>I am the NavBar component</p>
+  <div id='navBarDiv'>
+    <p>I am the NavBar test p tag</p>
     <button @click='renderMap()'>Tree</button>
     <button @click='renderMetrics()'>Web Metrics</button>
     <button @click='logMap()'>Console Log Map</button>
@@ -35,3 +35,12 @@ export default {
   }
 }
 </script>
+  
+<style>
+#navBarDiv {
+    background-color: black;
+  }
+  p {
+    font-size: 22px;
+  }
+</style>
