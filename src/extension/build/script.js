@@ -8,7 +8,6 @@ window.addEventListener('keydown', () => {
   return output;
 }
   let map = getMap(window.__VUE_DEVTOOLS_INSTANCE_MAP__.get('1:3'))
-  console.log("cloned map:", map)
   window.postMessage({
     map: map,
     source: 'kangaVUE',

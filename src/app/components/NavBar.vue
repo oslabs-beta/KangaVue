@@ -3,7 +3,7 @@
     <p>I am the NavBar component</p>
     <button @click='renderMap()'>Tree</button>
     <button @click='renderMetrics()'>Web Metrics</button>
-    <button @click='checkPort()'>Check Port</button>
+    <button @click='setTree()'>Set Tree</button>
   </div>
 </template>
 
@@ -17,20 +17,21 @@ export default {
     renderMetrics() {
       this.$emit('renderMetrics')
     },
-    checkPort() {
-      // port.onMessage.addListener(function(msg) {
-      //   console.log("message recieved" + msg);
-      // })
+    setTree() {
+      // console.log("localstorage:", window.localStorage)
+      // this.$root.$emit('localStorage', window.localStorage)
+      this.$emit('setTree')
     },
   },
   mounted: () => {
-    let port = chrome.runtime.connect({
-    name: "Nav Bar"
-});
-    console.log('Nav Bar Mounted', port);
-    port.onMessage.addListener(function(msg) {
-      console.log("message recieved on Nav Bar" + msg);
-    })
-  }
+  
+    
+    // chrome.runtime.onConnect.addListener(function(port) {
+    //   console.assert(port.name == "content_script / NavBar");
+    //     port.onMessage.addListener(function(msg) {
+    //       console.log("message recieved on Nav Bar" + msg);
+    //     });
+    // });
+  },
 }
 </script>
