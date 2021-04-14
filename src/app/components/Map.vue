@@ -16,30 +16,30 @@
 </template>
 
 <script>
-// import * as d3 from "d3";
 import { tree, CollapseOnClick } from 'vued3tree';
-// function getMap(c, output = { children: [] }) {
-//   if (!c.$children) {
-//     return output;
-//   }
-//   output.name = c.$vnode.tag;
-//   c.$children.forEach((child) => output.children.push(getMap(child)));
-//   return output;
-// }
-//console.log('mapped out:', getMap(window.__VUE_DEVTOOLS_INSTANCE_MAP__));
-// console.log('window:', window);
-// console.log('mapped:', window.__VUE_DEVTOOLS_INSTANCE_MAP__);
 export default {
   name: 'Map',
   components: {
     tree,
     CollapseOnClick,
   },
-  data() {
-    return{
-      tree: localStorage.treemap
+  props: {
+    treex: Object
+  },
+  data (){
+    console.log('treex:', this.treex)
+    let newmap = JSON.parse(this.treex)
+    console.log("newmap:", newmap)
+    return {
+      tree: newmap
     }
-  }
+  },
+  mounted: function(){
+    console.log("mounted tree:", this.treex)
+  },
+  updated: function(){
+      console.log("map rerendered")
+  },
 };
 </script>
 <style>

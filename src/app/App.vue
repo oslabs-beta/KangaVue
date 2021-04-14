@@ -5,7 +5,7 @@
     </div>
     <router-view />
     <navbar @renderMetrics="isMapView = false" @renderMap="isMapView = true" @setTree="setTree"/>
-    <main-container :isMapView="isMapView"/>
+    <main-container :isMapView="isMapView" :treex="treex"/>
   </div>
 </template>
 
@@ -23,14 +23,15 @@ export default {
   },
   methods: {
     setTree(){
-      console.log('localstorage.treemap:', localStorage.treemap)
-      this.treemap = localStorage.treemap
+    console.log("first tree:", this.treex);
+    this.treex=localStorage.treemap; 
+    console.log("updated tree:", this.treex);
     }
   },
    data() {
     return {
       isMapView: false,
-      treemap: undefined
+      treex: undefined
     }
   }
 };
