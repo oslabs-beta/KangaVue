@@ -1,41 +1,28 @@
 <template>
-  <div>
-   <apexchart 
-     width="500" type="bar" 
-     :options="options" :series="series">
-   </apexchart>  
-  </div>
+<div id="chart">
+        <apexchart type="radialBar" height="350" :options="chartOptions" :series="series"></apexchart>
+      </div>
 </template>
 <script>
 export default {
   name: 'WebMetrics',
   data: () => ({
-    options: {
-      chart: {
-        id: 'vuechart-example'
-      },
-      xaxis: {
-        categories: [
-         "Jan",
-         "Feb",
-         "Mar",
-         "Apr",
-         "May",
-         "Jun",
-         "Jul",
-         "Aug",
-         "Sep",
-         "Oct",
-         "Nov",
-         "Dec"
-        ]
-      }
-    },
-    series: [{
-      name: 'series-1',
-      data: [55, 62, 89, 66, 98, 72, 101, 75, 94, 120, 117, 139]
-    }]
-  })
+          series: [70],
+          chartOptions: {
+            chart: {
+              height: 350,
+              type: 'radialBar',
+            },
+            plotOptions: {
+              radialBar: {
+                hollow: {
+                  size: '30%',
+                }
+              },
+            },
+            labels: ['Cricket'],
+          },
+        })
 }
 </script>
 
