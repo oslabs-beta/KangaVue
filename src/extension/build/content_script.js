@@ -29,6 +29,14 @@ getFID(gatherMetrics);
 getFCP(gatherMetrics);
 getCLS(gatherMetrics);
 
+
+// chrome.runtime.onConnect.addListener(function(port) {
+//   console.assert(port.name == "content_script / NavBar");
+//     port.onMessage.addListener(function(msg) {
+//       console.log("message recieved on Nav Bar" + msg);
+//     });
+// });
+
 window.addEventListener('message', function(event) {
   // Only accept messages from the same frame
   if (event.source !== window) {

@@ -16,6 +16,11 @@
 //////////LISTENER CODE///////////////////
 var connections = {};
 
+chrome.tabs.query({active: true, currentWindow:true}, function(tabs)
+{console.log('backgroundjs tabs check:', tabs)
+
+});
+
 chrome.runtime.onConnect.addListener(function (port) {
 
     var extensionListener = function (message, sender, sendResponse) {
@@ -53,9 +58,9 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     if (sender.tab) {
       var tabId = sender.tab.id;
       if (tabId in connections) {
-        console.log('this message is sending to:', connections[tabId])
-        let msg = {...request, connections, tabId}
-        console.log('msg from backgroundjs ln60:', msg)
+        console.log('conexios', connections)
+        let msg = {...request, tabId}
+        console.log('msg from backgroundjs ln58:', msg)
         connections[tabId].postMessage(msg);
       } else {
         console.log("Tab not found in connection list.");
@@ -63,6 +68,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     } else {
       console.log("sender.tab not defined.");
     }
+
     return true;
 });
 

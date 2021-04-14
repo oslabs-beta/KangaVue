@@ -17,19 +17,20 @@ backgroundPageConnection.postMessage({
 //     name: "devtools-page"
 // });
 
-backgroundPageConnection.onMessage.addListener(function (message) {
+backgroundPageConnection.onMessage.addListener(function (message,) {
 chrome.runtime.onMessage.addListener((message, callback) => {
   if (message == "runContentScript"){
-    console.log("message devtools ln 19:", message)
     chrome.scripting.executeScript({
       file: 'content_script.js'
     });
   }else
   if(message.id === 'filteredMap'){
-    console.log("backpagecon:", backgroundPageConnection)
-    console.log('frontendcon:', frontEndConnection)
+    // console.log("backpagecon:", backgroundPageConnection)
+    // console.log('frontendcon:', frontEndConnection)
     console.log("msg:", message)
-    message.tabId.postMessage(message)
+    console.log("message.tabId:", message.tabId)
+    localStorage.setItem('treemap', JSON.stringify(message.map))
+    console.log("localstorage:", window.localStorage)
   }
 });});
 
