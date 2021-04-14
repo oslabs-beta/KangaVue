@@ -1,4 +1,4 @@
-chrome.devtools.panels.create('oVUElord', null, 'panel.html', () => {});
+chrome.devtools.panels.create('KangaVue', null, 'panel.html', () => {});
 
 var backgroundPageConnection = chrome.runtime.connect({
     name: "panel"
