@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>I am main container component</p>
-    <Map v-if="isMapView" />
+      <Map v-if="isMapView" :treex="treex" />
     <web-metrics v-else/>
   </div>
 </template>
@@ -14,7 +14,8 @@ export default {
   components: { Map, WebMetrics },
   name: 'MainContainer',
   props: {
-    isMapView: Boolean
+    isMapView: Boolean,
+    treex: Object
   }
 }
 </script>
