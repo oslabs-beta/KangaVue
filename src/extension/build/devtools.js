@@ -23,14 +23,16 @@ chrome.runtime.onMessage.addListener((message, callback) => {
     chrome.scripting.executeScript({
       file: 'content_script.js'
     });
-  }else
-  if(message.id === 'filteredMap'){
+  }else if(message.id === 'filteredMap'){
     // console.log("backpagecon:", backgroundPageConnection)
     // console.log('frontendcon:', frontEndConnection)
     console.log("msg:", message)
     console.log("message.tabId:", message.tabId)
     localStorage.setItem('treemap', JSON.stringify(message.map))
     console.log("localstorage:", window.localStorage)
+  } else if(message.id === 'webMetric'){
+    console.log('Web Metric Received!', message.name, message.value);
+    localStorage.setItem(message.name, message.value);
   }
 });});
 

@@ -12,8 +12,7 @@
 //   });
 // });
 
-
-//////////LISTENER CODE///////////////////
+/// ///////LISTENER CODE///////////////////
 var connections = {};
 
 chrome.tabs.query({active: true, currentWindow:true}, function(tabs)
@@ -68,7 +67,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     } else {
       console.log("sender.tab not defined.");
     }
-
     return true;
 });
 
@@ -77,7 +75,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 // Create an object to store tabs information in
 // const tabsObj = {};
 
-// // Listens for messages from content_script
+// Listens for messages from content_script
 // chrome.runtime.onMessage.addListener((req, sender) => {
 //   console.log("Reqeust and Sender \n", req, sender);
 
