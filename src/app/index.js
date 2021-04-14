@@ -18,6 +18,10 @@ import Vue from 'vue';
 import App from './App.vue';
 import './styles/styles.css';
 
+import VueApexCharts from 'vue-apexcharts'
+
+Vue.component('apexchart', VueApexCharts);
+
 new Vue({
   el: '#app',
   data:{

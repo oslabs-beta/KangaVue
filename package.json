@@ -1,5 +1,5 @@
 {
-  "name": "ovuelord",
+  "name": "KangaVue",
   "version": "1.0.0",
   "description": "Developer tool for vue",
   "main": "index.js",
@@ -9,19 +9,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/StackOverFlowWhereArtThou/oVUElord.git"
+    "url": "git+https://github.com/StackOverFlowWhereArtThou/KangaVue.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/StackOverFlowWhereArtThou/oVUElord/issues"
+    "url": "https://github.com/StackOverFlowWhereArtThou/KangaVue/issues"
   },
-  "homepage": "https://github.com/StackOverFlowWhereArtThou/oVUElord#readme",
+  "homepage": "https://github.com/StackOverFlowWhereArtThou/KangaVue#readme",
   "dependencies": {
+    "apexcharts": "^3.26.0",
     "core-js": "^3.10.0",
     "d3": "^6.6.2",
     "sass": "^1.32.8",
     "vue": "^2.6.12",
+    "vue-apexcharts": "^1.6.1",
     "vue-router": "^3.5.1",
     "vued3tree": "^5.1.0",
     "vuetify": "^2.4.9",

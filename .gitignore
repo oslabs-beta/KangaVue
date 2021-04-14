@@ -1,3 +1,5 @@
 node_modules
 .DS_Store
-bundles/
+bundles/*
+src/extension/build/app.bundle.js
+src/extension/build/app.bundle.js.LICENSE.txt
