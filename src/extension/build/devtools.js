@@ -4,6 +4,10 @@ var backgroundPageConnection = chrome.runtime.connect({
     name: "panel"
 });
 
+let frontEndConnection = chrome.runtime.connect({
+    name: "frontEnd"
+});
+
 backgroundPageConnection.postMessage({
     name: 'init',
     tabId: chrome.devtools.inspectedWindow.tabId
@@ -13,13 +17,20 @@ backgroundPageConnection.postMessage({
 //     name: "devtools-page"
 // });
 
-backgroundPageConnection.onMessage.addListener(function (message) {
+backgroundPageConnection.onMessage.addListener(function (message,) {
 chrome.runtime.onMessage.addListener((message, callback) => {
   if (message == "runContentScript"){
-    console.log("message devtools ln 19:", message)
     chrome.scripting.executeScript({
       file: 'content_script.js'
     });
+  }else
+  if(message.id === 'filteredMap'){
+    // console.log("backpagecon:", backgroundPageConnection)
+    // console.log('frontendcon:', frontEndConnection)
+    console.log("msg:", message)
+    console.log("message.tabId:", message.tabId)
+    localStorage.setItem('treemap', JSON.stringify(message.map))
+    console.log("localstorage:", window.localStorage)
   }
 });});
 
