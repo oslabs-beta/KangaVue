@@ -1,4 +1,4 @@
-chrome.devtools.panels.create('KangaVue', null, 'panel.html', () => {});
+chrome.devtools.panels.create('KangaVue', 'assets/oVUElord_logo.png', 'panel.html', () => {});
 
 var backgroundPageConnection = chrome.runtime.connect({
     name: "panel"
