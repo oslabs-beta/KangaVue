@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <p>I am main container component</p>
+  <div id='mainContainerDiv'>
       <Map v-if="isMapView" :treex="treex" />
     <div v-else class="webMetricContainer">
       <web-metrics webMetricName="LCP" :webMetricValue="LCP" webMetricTitle="Largest Contentful Paint" webMetricDescription="Measures Loading Performance. Benchmark is less than 2500ms." :webMetricBenchmark="2500"/>
@@ -35,3 +34,7 @@ export default {
   }
 }
 </script>
+
+<style>
+  
+</style>

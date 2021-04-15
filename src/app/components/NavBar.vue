@@ -1,7 +1,6 @@
 <template>
-  <div>
-    <p>I am the NavBar component</p>
-    <button @click='renderMap()'>Tree</button>
+  <div id='navBarDiv'>
+    <button @click='renderMap()'><i class="fas fa-tree"></i>Tree</button>
     <button @click='renderMetrics()'>Web Metrics</button>
     <button @click='setTree()'>Set Tree</button>
   </div>
@@ -35,3 +34,29 @@ export default {
   },
 }
 </script>
+  
+<style>
+  #navBarDiv {
+    background-color: #262323;
+    border-style: solid;
+    border-color: #262323;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 5px white;
+    /* border-color: red; */
+  }
+  button {
+    height: 100%;
+    width: 60px;
+    background-color: #262323;
+    color: white;
+    overflow: hidden;
+    outline: none;
+    border: none;
+  }
+  button:hover {
+    background-color: #0EA47A;
+  }
+</style>
