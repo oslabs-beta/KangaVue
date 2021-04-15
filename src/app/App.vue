@@ -39,7 +39,5 @@ export default {
 <style>
   #mainDiv {
     height: 100%;
-    border-style: solid;
-    border-color: blue;
   }
 </style>
