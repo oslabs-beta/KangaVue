@@ -3,7 +3,11 @@ window.addEventListener('keydown', () => {
   if (!c.$children) {
     return output;
   }
-  output.name = c.$vnode.tag;
+  let tag = c.$vnode.tag
+  if(tag.startsWith("vue-component-")){
+    tag = tag.slice(14)
+  }
+  output.name = tag;
   c.$children.forEach((child) => output.children.push(getMap(child)));
   return output;
 }

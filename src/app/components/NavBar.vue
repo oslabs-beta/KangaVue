@@ -1,8 +1,8 @@
 <template>
   <div id='navBarDiv'>
-    <button @click='renderMap()'><i class="fas fa-tree"></i>Tree</button>
-    <button @click='renderMetrics()'>Web Metrics</button>
-    <button @click='setTree()'>Set Tree</button>
+    <button class="treebtn" @click='renderMap()'><i class="fas fa-tree fa-lg"></i><div class="tooltip"><span class="tooltiptext">Component Tree</span></div></button>
+    <button class="treebtn" @click='renderMetrics()'><i class="fas fa-stopwatch-20 fa-lg"></i><div class="tooltip"><span class="tooltiptext">Web Metrics</span></div></button>
+    <button class="treebtn" @click='setTree()'><i class="fas fa-sync fa-lg"></i><div class="tooltip"><span class="tooltiptext">Set Tree</span></div></button>
   </div>
 </template>
 
@@ -49,14 +49,32 @@ export default {
   }
   button {
     height: 100%;
-    width: 60px;
+    width: 120px;
     background-color: #262323;
     color: white;
-    overflow: hidden;
+    overflow: visible;
     outline: none;
     border: none;
   }
-  button:hover {
-    background-color: #0EA47A;
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+  .tooltiptext {
+    visibility: hidden;
+    background-color: rgb(138, 250, 190);
+    color: black;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 100;
+    top: -25px;
+    right: 100%;
+  }
+
+  .treebtn:hover .tooltiptext {
+    visibility: visible;
   }
 </style>

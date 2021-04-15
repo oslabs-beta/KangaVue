@@ -6,7 +6,7 @@
       radius="4px"
       layoutType="horizontal"
       duration="400"
-      type="cluster"
+      type="tree"
       key="0"
     >
       <slot name="behavior" :on="on" :actions="actions"> </slot>
@@ -46,7 +46,7 @@ export default {
 <style>
  .pa-2 {
   max-width: inherit;
-  height: 500px;
+  height: 1000px;
 }
 .treeclass .nodetree circle {
     fill: #00ffb8;
