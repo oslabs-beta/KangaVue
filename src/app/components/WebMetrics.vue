@@ -1,8 +1,11 @@
 <template>
 <div class="webMetricChart">
-    Name that should be passed down {{name}}
-        <apexchart type="radialBar" height="350" :options="chartOptions" :series="series"></apexchart>
-      </div>
+  <b>{{this.webMetricTitle}}</b>
+  <br>
+  {{this.webMetricDescription}}
+  <br>
+  <apexchart type="radialBar" height="200" :options="chartOptions" :series="series"></apexchart>
+  </div>
 </template>
 <script>
 export default {
@@ -10,14 +13,16 @@ export default {
   props: {
     webMetricName: String,
     webMetricValue: Number,
+    webMetricTitle: String,
+    webMetricDescription: String,
+    webMetricBenchmark: Number,
   },
   data (){
-    console.log('Webmetric value', this.webMetricValue);
     return {
-          series: [localStorage[this.webMetricName]], 
+          series: [this.webMetricValue], 
           chartOptions: {
             chart: {
-              height: 350,
+              height: 200,
               type: 'radialBar',
               toolbar: {
                 show: true
@@ -25,8 +30,8 @@ export default {
             },
             plotOptions: {
               radialBar: {
-                startAngle: -135,
-                endAngle: 225,
+                startAngle: -120,
+                endAngle: 120,
                  hollow: {
                   margin: 0,
                   size: '70%',
@@ -86,7 +91,7 @@ export default {
                 inverseColors: true,
                 opacityFrom: 1,
                 opacityTo: 1,
-                stops: [0, 100],
+                stops: [0, this.webMetricBenchmark],
               }
             },
             stroke: {
