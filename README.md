@@ -7,7 +7,7 @@ After installing KangaVue, you can test its functionalities with your Vue applic
 ## <b>Installation</b>
 <!-- Include something like this -->
 <!-- [extension](https://chrome.google.com/webstore/detail/reactime/cgibknllccemdnfhfpmjhffpjfeidjga) -->
-To get started, install the KangaVue <b style="color:red">EXTENSION LINK TO GO HERE</b> from Chrome Web Store.
+<!-- To get started, install the KangaVue <b style="color:red">EXTENSION LINK TO GO HERE</b> from Chrome Web Store. -->
 
 NOTE: The Vue Developer Tools [extension](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en) is also required for KangaVue to run, if you do not already have it installed on your browser.
 
@@ -36,7 +36,7 @@ When your app loads or refreshes, the initial loading metrics will be rendered i
 
 ## <b>Read More</b>
 
-- [Name of future Medium Article](www.google.com)
+- [KangaVue — Vue.js web metrics in a devtool pouch](https://dxbernstein.medium.com/kangavue-vue-js-web-metrics-in-a-devtool-pouch-3aee7f128a3f)
 
 ## <b>Authors</b>
 - **Harry Fox** - [@StackOverFlowWhereArtThou](https://github.com/StackOverFlowWhereArtThou)
