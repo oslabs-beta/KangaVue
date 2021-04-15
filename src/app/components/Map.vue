@@ -1,6 +1,5 @@
 <template #behavior="{ on, actions }">
   <div class="pa-2">
-    <h3 class="pb-2">Your map</h3>
     <tree
       :data="tree"
       node-text="name"
@@ -45,9 +44,24 @@ export default {
 };
 </script>
 <style>
-.pa-2 {
+ .pa-2 {
   max-width: inherit;
   height: 500px;
-  border: 5px solid greenyellow;
+}
+.treeclass .nodetree circle {
+    fill: #00ffb8;
+}
+.treeclass .node--internal circle {
+    cursor: pointer;
+    fill: #13799c;
+}
+.treeclass .linktree {
+  fill: none;
+  stroke: #0ea47a;
+  stroke-opacity: 0.4;
+}
+.treeclass .nodetree text {
+    font: 15px sans-serif;
+    cursor: pointer;
 }
 </style>

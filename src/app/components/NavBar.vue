@@ -1,6 +1,6 @@
 <template>
   <div id='navBarDiv'>
-    <button @click='renderMap()'>Tree</button>
+    <button @click='renderMap()'><i class="fas fa-tree"></i>Tree</button>
     <button @click='renderMetrics()'>Web Metrics</button>
     <button @click='setTree()'>Set Tree</button>
   </div>
@@ -39,10 +39,12 @@ export default {
   #navBarDiv {
     background-color: #262323;
     border-style: solid;
+    border-color: #262323;
     height: 50px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    border-bottom: 5px white;
     /* border-color: red; */
   }
   button {

@@ -8,13 +8,10 @@ body {
   margin: 0;
   height: 100%;
   padding: 0px;
-  /* border-style: solid;
-  border-color: red; */
+  background-color: rgb(182, 255, 206);
 }
 
 #app {
   height: 100%;
-  border-style: solid;
-  border-color: blue;
 
 }
